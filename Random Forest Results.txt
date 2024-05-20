@@ -1,0 +1,51 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -O -attribute-importance -I 500 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     SLID3-1
+Instances:    6832
+Attributes:   5
+              Sex
+              Language
+              Education
+              Age
+              Wages
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 500 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+*** Out-of-bag estimates ***
+
+Correlation coefficient                  0.3699
+Mean absolute error                      3.2577
+Root mean squared error                  5.1399
+Relative absolute error                105.5601 %
+Root relative squared error             97.7619 %
+Total Number of Instances             6832     
+
+
+Attribute importance based on average impurity decrease (and number of nodes using that attribute)
+
+    131.57 ( 26053)  Sex
+     87.86 (415997)  Age
+     67.68 ( 55311)  Language
+     57.64 (440760)  Education
+
+
+Time taken to build model: 4.41 seconds
+
+=== Cross-validation ===
+=== Summary ===
+
+Correlation coefficient                  0.3645
+Mean absolute error                      3.2745
+Root mean squared error                  5.1685
+Relative absolute error                106.0797 %
+Root relative squared error             98.287  %
+Total Number of Instances             6832     
+

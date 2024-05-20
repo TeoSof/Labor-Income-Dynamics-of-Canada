@@ -1,0 +1,116 @@
+=== Run information ===
+
+Scheme:       weka.clusterers.MakeDensityBasedClusterer -M 1.0E-6 -W weka.clusterers.MakeDensityBasedClusterer -- -M 1.0E-6 -W weka.clusterers.SimpleKMeans -- -init 0 -max-candidates 100 -periodic-pruning 10000 -min-density 2.0 -t1 -1.25 -t2 -1.0 -N 2 -A "weka.core.EuclideanDistance -R first-last" -I 500 -num-slots 1 -S 10
+Relation:     SLID3-1
+Instances:    6832
+Attributes:   5
+              Sex
+              Language
+              Education
+              Age
+              Wages
+Test mode:    evaluate on training data
+
+
+=== Clustering model (full training set) ===
+
+MakeDensityBasedClusterer: 
+
+Wrapped clusterer: MakeDensityBasedClusterer: 
+
+Wrapped clusterer: 
+kMeans
+======
+
+Number of iterations: 10
+Within cluster sum of squared errors: 5033.776855673748
+
+Initial starting points (random):
+
+Cluster 0: Male,English,13,49,21.44
+Cluster 1: Male,English,15,41,17.16
+
+Missing values globally replaced with mean/mode
+
+Final cluster centroids:
+                         Cluster#
+Attribute    Full Data          0          1
+              (6832.0)   (2643.0)   (4189.0)
+============================================
+Sex             Female     Female     Female
+Language       English    English    English
+Education      12.3276    10.5669    13.4385
+Age            44.2968    63.4166    32.2335
+Wages          14.8977    15.5143    14.5086
+
+
+
+Fitted estimators (with ML estimates of variance):
+
+Cluster: 0 Prior probability: 0.3869
+
+Attribute: Sex
+Discrete Estimator. Counts =  1187 1458  (Total = 2645)
+Attribute: Language
+Discrete Estimator. Counts =  1913 539 194  (Total = 2646)
+Attribute: Education
+Normal Distribution. Mean = 10.5669 StdDev = 3.3671
+Attribute: Age
+Normal Distribution. Mean = 63.4166 StdDev = 10.5979
+Attribute: Wages
+Normal Distribution. Mean = 15.5143 StdDev = 3.8173
+
+Cluster: 1 Prior probability: 0.6131
+
+Attribute: Sex
+Discrete Estimator. Counts =  2007 2184  (Total = 4191)
+Attribute: Language
+Discrete Estimator. Counts =  3433 485 274  (Total = 4192)
+Attribute: Education
+Normal Distribution. Mean = 13.4385 StdDev = 2.6864
+Attribute: Age
+Normal Distribution. Mean = 32.2335 StdDev = 9.4192
+Attribute: Wages
+Normal Distribution. Mean = 14.5086 StdDev = 5.958
+
+Fitted estimators (with ML estimates of variance):
+
+Cluster: 0 Prior probability: 0.3787
+
+Attribute: Sex
+Discrete Estimator. Counts =  1151 1438  (Total = 2589)
+Attribute: Language
+Discrete Estimator. Counts =  1839 559 192  (Total = 2590)
+Attribute: Education
+Normal Distribution. Mean = 10.6137 StdDev = 3.4544
+Attribute: Age
+Normal Distribution. Mean = 63.6896 StdDev = 10.5072
+Attribute: Wages
+Normal Distribution. Mean = 15.1891 StdDev = 2.2524
+
+Cluster: 1 Prior probability: 0.6213
+
+Attribute: Sex
+Discrete Estimator. Counts =  2043 2204  (Total = 4247)
+Attribute: Language
+Discrete Estimator. Counts =  3507 465 276  (Total = 4248)
+Attribute: Education
+Normal Distribution. Mean = 13.3721 StdDev = 2.6786
+Attribute: Age
+Normal Distribution. Mean = 32.4784 StdDev = 9.6201
+Attribute: Wages
+Normal Distribution. Mean = 14.7201 StdDev = 6.4275
+
+
+Time taken to build model (full training data) : 0.02 seconds
+
+=== Model and evaluation on training set ===
+
+Clustered Instances
+
+0      2516 ( 37%)
+1      4316 ( 63%)
+
+
+Log likelihood: -10.99703
+

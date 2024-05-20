@@ -1,0 +1,78 @@
+=== Run information ===
+
+Scheme:       weka.clusterers.SimpleKMeans -init 0 -max-candidates 100 -periodic-pruning 10000 -min-density 2.0 -t1 -1.25 -t2 -1.0 -V -N 8 -A "weka.core.EuclideanDistance -R first-last" -I 500 -num-slots 1 -S 10
+Relation:     SLID3-1
+Instances:    6832
+Attributes:   5
+              Sex
+              Language
+              Education
+              Age
+              Wages
+Test mode:    evaluate on training data
+
+
+=== Clustering model (full training set) ===
+
+
+kMeans
+======
+
+Number of iterations: 30
+Within cluster sum of squared errors: 811.0070459271928
+
+Initial starting points (random):
+
+Cluster 0: Male,English,13,49,21.44
+Cluster 1: Male,English,15,41,17.16
+Cluster 2: Female,English,16,48,15.5
+Cluster 3: Female,Other,4,41,10.08
+Cluster 4: Female,English,16,29,17.97
+Cluster 5: Female,English,12,63,15.5
+Cluster 6: Female,English,12,76,15.5
+Cluster 7: Male,Other,8.5,72,15.5
+
+Missing values globally replaced with mean/mode
+
+Final cluster centroids:
+                           Cluster#
+Attribute     Full Data           0           1           2           3           4           5           6           7
+               (6832.0)     (945.0)    (1698.0)     (508.0)     (584.0)     (955.0)     (846.0)     (747.0)     (549.0)
+=======================================================================================================================
+Sex              Female        Male        Male      Female      Female      Female      Female      Female        Male
+  Male      3192.0 ( 46%)945.0 (100%)1698.0 (100%)  0.0 (  0%)  0.0 (  0%)  0.0 (  0%)  0.0 (  0%)  0.0 (  0%)549.0 (100%)
+  Female    3640.0 ( 53%)  0.0 (  0%)  0.0 (  0%)508.0 (100%)584.0 (100%)955.0 (100%)846.0 (100%)747.0 (100%)  0.0 (  0%)
+
+Language        English     English     English     English       Other     English     English     English       Other
+  English   5344.0 ( 78%)895.0 ( 94%)1602.0 ( 94%)478.0 ( 94%)  0.0 (  0%)889.0 ( 93%)797.0 ( 94%)683.0 ( 91%)  0.0 (  0%)
+  Other     1022.0 ( 14%)  0.0 (  0%)  0.0 (  0%)  0.0 (  0%)539.0 ( 92%)  0.0 (  0%)  0.0 (  0%)  0.0 (  0%)483.0 ( 87%)
+  French    466.0 (  6%) 50.0 (  5%) 96.0 (  5%) 30.0 (  5%) 45.0 (  7%) 66.0 (  6%) 49.0 (  5%) 64.0 (  8%) 66.0 ( 12%)
+
+Education       12.3276      11.113      13.505     16.4297     10.8611     12.5018     11.6702      10.747     11.4016
+              +/-3.2815   +/-3.3878   +/-2.6998   +/-1.8181   +/-4.1089   +/-1.9429   +/-1.9495   +/-3.1009   +/-3.9538
+
+Age             44.2968     62.5323     31.1484     36.9291     50.1318     25.2471     46.0118     70.3186     49.2732
+             +/-18.1258  +/-10.3759   +/-9.1614   +/-8.8669  +/-17.1938   +/-5.9762   +/-6.6647   +/-7.6235  +/-16.5083
+
+Wages           14.8977     16.4151     15.2648     17.7399     14.4998     11.3605     13.7716     15.3407     16.2289
+               +/-5.258   +/-4.7787   +/-6.4166   +/-6.7005   +/-4.0734   +/-3.8022   +/-3.5327   +/-2.2602   +/-5.4205
+
+
+
+
+
+Time taken to build model (full training data) : 0.05 seconds
+
+=== Model and evaluation on training set ===
+
+Clustered Instances
+
+0       945 ( 14%)
+1      1698 ( 25%)
+2       508 (  7%)
+3       584 (  9%)
+4       955 ( 14%)
+5       846 ( 12%)
+6       747 ( 11%)
+7       549 (  8%)
+
